@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="prgToXML.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:prgToMPR02"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1311" Height="760">
+
+    <Grid Margin="5,5,5,5" Width="1270" Height="720">
+        <Button Content="Dizin Seç" Margin="32,27,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <TextBox x:Name="TextBoxOutput" HorizontalAlignment="Left" Margin="32,107,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"  AcceptsReturn="True" Height="504" Width="275"/>
+        <TextBlock HorizontalAlignment="Left" Margin="32,77,0,0" TextWrapping="Wrap" Text="İşlenenen Dosyalar:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="TextBlock_Dir" HorizontalAlignment="Left" Margin="127,34,0,0" TextWrapping="Wrap" Text="Dizin : " VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Margin="489,107,0,0"/>
+        <TextBox x:Name="textBox2" TextWrapping="Wrap" Text="8.5" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Margin="489,144,717,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged" Margin="333,114,0,0"><Run Text="Freze"/><Run Text="-Milling"/><Run Text=" "/><Run Text="Tool Name"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="1.04,0.632" Margin="350,151,0,0" SelectionChanged="TextBlock_SelectionChanged_1"><Run Text="Freze"/><Run Text="-Milling"/><Run Text=" "/><Run Text="Tool "/><Run Text="Dia"/></TextBlock>
+
+    </Grid>
+</Page>
