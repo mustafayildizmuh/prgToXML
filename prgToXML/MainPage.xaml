@@ -17,6 +17,8 @@
         <TextBox x:Name="textBox2" TextWrapping="Wrap" Text="8.5" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Margin="489,144,717,0"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged" Margin="333,114,0,0"><Run Text="Freze"/><Run Text="-Milling"/><Run Text=" "/><Run Text="Tool Name"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="1.04,0.632" Margin="350,151,0,0" SelectionChanged="TextBlock_SelectionChanged_1"><Run Text="Freze"/><Run Text="-Milling"/><Run Text=" "/><Run Text="Tool "/><Run Text="Dia"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="1.04,0.632" Margin="362,186,0,0" SelectionChanged="TextBlock_SelectionChanged_1" Text="WHEN loop active ?"/>
+        <CheckBox x:Name="CheckBox01" Content="" Margin="489,181,0,0" VerticalAlignment="Top" IsChecked="True"/>
 
     </Grid>
 </Page>

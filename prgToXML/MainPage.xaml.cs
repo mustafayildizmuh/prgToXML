@@ -274,7 +274,12 @@ namespace prgToXML
 
                 else if (trimmedLine.StartsWith("#WEND"))  // LOOP
                 {
-                    whileCond = "False"; // canceling loop only one tour is enough
+
+                    if (!CheckBox01.IsChecked.HasValue || CheckBox01.IsChecked.Value == false)
+                    {
+                        // CheckBox is not checked.
+                        whileCond = "False";
+                    }
                     if (whileCond == "True") i = whileLoopIndexStart;
                     else inWhileLoop = false;
                 }
