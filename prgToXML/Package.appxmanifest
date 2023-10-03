@@ -9,7 +9,7 @@
   <Identity
     Name="3908e74a-c386-431c-9799-c4751b56ffef"
     Publisher="CN=Mustafa"
-    Version="1.0.0.0" />
+    Version="1.0.6.0" />
 
   <mp:PhoneIdentity PhoneProductId="3908e74a-c386-431c-9799-c4751b56ffef" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
@@ -30,15 +30,17 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="prgToMPR02.App">
+      EntryPoint="prgToXML.App">
       <uap:VisualElements
-        DisplayName="prgToMPR02"
+        DisplayName="prgToXML"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="prgToMPR02"
+        Description="prgToXML"
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape"/></uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>

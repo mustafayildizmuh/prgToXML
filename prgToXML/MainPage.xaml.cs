@@ -1,16 +1,14 @@
-﻿using System;
-using NCalc;
+﻿using NCalc;
+using System;
 using System.Collections.Generic;
-using System.IO;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Xml;
 using Windows.Storage;
+using Windows.Storage.Pickers;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Popups;
-using System.Threading.Tasks;
-using Windows.Storage.Pickers;
-using System.Text.RegularExpressions;
-using System.ComponentModel.Design;
-using System.Xml;
 
 namespace prgToXML
 {
@@ -32,7 +30,7 @@ namespace prgToXML
             if (folder != null)
             {
                 // Print out Dir
-                TextBlock_Dir.Text +=  folder.Path;
+                TextBlock_Dir.Text += folder.Path;
 
                 // Find all PRG files in the selected directory
                 IReadOnlyList<StorageFile> prgFiles = await folder.GetFilesAsync();
@@ -155,7 +153,7 @@ namespace prgToXML
 
             for (int i = 0; i < lines.Length; i++)
             {
-                
+
                 string line = lines[i]; // delete the row
 
                 string trimmedLine = line.Trim();
@@ -186,7 +184,7 @@ namespace prgToXML
 
                     // Create CAD element
                     XmlElement cadElement3 = XmlHelper.AddElement(xmlDoc, kdtPanelFormatElement, "CAD");
-                    
+
                     XmlHelper.AddElement(xmlDoc, cadElement3, "TypeNo", "7");
                     XmlHelper.AddElement(xmlDoc, cadElement3, "TypeName", "Path");
                     XmlHelper.AddElement(xmlDoc, cadElement3, "Width", frzToolDia);
@@ -256,10 +254,10 @@ namespace prgToXML
                     }
                     whileLoopIndexEnd = 0;
 
-                    for (int j = i; j < lines.Length ; j++) if (lines[j].StartsWith("#WEND")) whileLoopIndexEnd = j;
+                    for (int j = i; j < lines.Length; j++) if (lines[j].StartsWith("#WEND")) whileLoopIndexEnd = j;
 
                     if (whileLoopIndexEnd == 0) // Error While Loop without WEND
-                    { 
+                    {
                         ShowErrorMessage("The WHILE loop has not ended with WEND.");
                         break;
                     }
@@ -500,7 +498,7 @@ namespace prgToXML
                     XmlHelper.AddElement(xmlDoc, cadElement, "Depth", depth);
                     XmlHelper.AddElement(xmlDoc, cadElement, "Diameter", toolDia);
                     XmlHelper.AddElement(xmlDoc, cadElement, "Enable", "1");
-                
+
                 }
                 else if (trimmedLine.StartsWith("G183"))    // Right Pocket Hole
                 {
