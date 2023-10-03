@@ -25,7 +25,11 @@ namespace prgToXML
             folderPicker.SuggestedStartLocation = PickerLocationId.ComputerFolder;
             folderPicker.FileTypeFilter.Add(".prg"); // Select only PRG files
 
+
             var folder = await folderPicker.PickSingleFolderAsync();
+
+            TextBoxOutput.Text = "";
+            TextBlock_Dir.Text = "Dizin: ";
 
             if (folder != null)
             {
@@ -121,11 +125,11 @@ namespace prgToXML
             bool inG100Block = false;   // PROGRAMMING OF TOP HOLES
             bool inG101Block = false;   // PROGRAMMING OF VERTICAL HOLES
             bool inG172Block = false;   // SELECTION OF THE START POINT IN FIXED CYCLES +TOOL, ROTATION SPEED, ENTRY SPEED, ROUTING BIT INCLINATIONS 
-            bool inG173Block = false;   // INTERPOLATION ORIGIN INDIPENDENT FROM WORKING FACE
+            //bool inG173Block = false;   // INTERPOLATION ORIGIN INDIPENDENT FROM WORKING FACE
             bool inG182Block = false;   // HORIZONTAL HOLES IN WORKPIECE LEFT FACE
             bool inG183Block = false;   // HORIZONTAL HOLES IN WORKPIECE RIGHT FACE
-            bool inG184Block = false;   // HORIZONTAL HOLES IN WORKPIECE REAR FACE
-            bool inG185Block = false;   // HORIZONTAL HOLES IN WORKPIECE FRONT FACE
+            //bool inG184Block = false;   // HORIZONTAL HOLES IN WORKPIECE REAR FACE
+            //bool inG185Block = false;   // HORIZONTAL HOLES IN WORKPIECE FRONT FACE
 
             bool inWhileLoop = false;   // HORIZONTAL HOLES IN WORKPIECE FRONT FACE
             int whileLoopIndexStart = 0;
